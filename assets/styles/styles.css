@@ -33,6 +33,7 @@ video {
 :root {
     --blue-900: rgb(11,13,23);
     --blue-300: rgb(208, 214, 249);
+    --bg-nav-menu: rgba(11, 13, 23, 0.15);
     --black: rgb(0,0,0);
     --white: rgb(255, 255, 255);
 }
@@ -41,6 +42,149 @@ video {
 
 /* Typography */
 
+/* Main styles */
+
+body {
+    background-color: var(--blue-900);
+}
+
 /* Header styles */
 
-/* Main styles */
+.site-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 88px;
+    padding: 0 6.4%;
+
+    @media screen and (min-width: 768px) {
+        height: 96px;
+        padding: 0;
+    }
+
+    .site-header-left {
+        @media screen and (min-width: 768px) {
+            margin-left: 5.21%;
+        }
+
+        .logo-wrapper {
+            width: 40px;
+            height: 40px;
+
+            @media screen and (min-width: 768px) {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+
+    .site-header-right {
+        border: 1px solid white;
+
+        @media screen and (min-width: 768px) {
+            width: 83.334%;
+            height: 100%;
+
+            @media screen and (min-width: 1200px) {
+                width: 51.11%;
+            }
+        }
+
+        .main-nav {
+            background: var(--bg-nav-menu);
+            backdrop-filter: blur(40px);
+
+            display: none;
+            /* display: flex; */
+            flex-direction: column;
+            gap: 80px;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 67.73%;
+            height: 100vh;
+            padding: 32px 0 32px 32px;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+
+                position: unset;
+
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+
+            .menu-close-button {
+                width: 24px;
+                height: 21px;
+                margin-right: 24px;
+
+                background-color: transparent;
+                border: none;
+
+                align-self: flex-end;
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+
+            ul {
+                list-style-type: none;
+
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    gap: 48px;
+
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 6.25% 0 0;
+                }
+
+                .main-nav-item {
+                    @media screen and (min-width: 768px) {
+                        height: 100%;
+                    }
+
+                    .nav-link {
+                        display: flex;
+                        gap: 12px;
+
+                        @media screen and (min-width: 768px) {
+                            height: 100%;
+
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mobile-menu-button {
+            width: 24px;
+            height: 21px;
+
+            background-color: transparent;
+            border: none;
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}
