@@ -31,7 +31,10 @@ video {
 /* Colors */
 
 :root {
-    
+    --blue-900: rgb(11,13,23);
+    --blue-300: rgb(208, 214, 249);
+    --black: rgb(0,0,0);
+    --white: rgb(255, 255, 255);
 }
 
 /* Utilities */
