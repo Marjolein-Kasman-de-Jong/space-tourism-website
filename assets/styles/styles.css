@@ -31,16 +31,39 @@ video {
 /* Colors */
 
 :root {
-    --blue-900: rgb(11,13,23);
+    --blue-900: rgb(11, 13, 23);
     --blue-300: rgb(208, 214, 249);
     --bg-nav-menu: rgba(255, 255, 255, 0.05);
-    --black: rgb(0,0,0);
+    --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
+    --white-25: rgba(255, 255, 255, 25%);
+    --white-50: rgba(255, 255, 255, 50%);
 }
 
 /* Utilities */
 
 /* Typography */
+
+.main-nav-item a:link,
+.main-nav-item a:visited,
+.main-nav-item a:hover,
+.main-nav-item a:active {
+    color: var(--white);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    .number {
+        font-weight: 700;
+        letter-spacing: 0.16875rem;
+    }
+}
 
 /* Main styles */
 
@@ -96,12 +119,14 @@ body.page-technology {
 body.page-technology::before {
     content: "";
     position: absolute;
+    z-index: -1;
     inset: 0;
+
     background-image: url("/assets/images/technology/background-technology-mobile.jpg");
     background-size: cover;
     background-position: center;
+
     transform: scaleX(-1);
-    z-index: -1;
 
     @media screen and (min-width: 768px) {
         background-image: url("/assets/images/technology/background-technology-tablet.jpg");
@@ -125,11 +150,15 @@ body.page-technology::before {
     padding: 0 6.4%;
 
     @media screen and (min-width: 768px) {
-        position: absolute;
-        top: 40px;
-        width: 100%;
         height: 96px;
         padding: 0;
+
+        @media screen and (min-width: 1200px) {
+            position: absolute;
+            top: 40px;
+            z-index: 10;
+            width: 100%;
+        }
     }
 
     .site-header-left {
@@ -154,7 +183,26 @@ body.page-technology::before {
             height: 100%;
 
             @media screen and (min-width: 1200px) {
+                position: relative;
                 width: 51.11%;
+            }
+        }
+
+        &::before {
+            @media screen and (min-width: 1200px) {
+                content: "";
+
+                position: absolute;
+                top: 50%;
+                right: 100%;
+
+                transform: translate(32px, -50%);
+                z-index: 20;
+
+                width: 76.09%;
+                height: 1px;
+
+                background-color: var(--white-25);
             }
         }
 
@@ -162,14 +210,16 @@ body.page-technology::before {
             background: var(--bg-nav-menu);
             backdrop-filter: blur(40px);
 
-            display: none;
-            /* display: flex; */
+            display: flex;
             flex-direction: column;
             gap: 80px;
 
             position: absolute;
             top: 0;
             right: 0;
+
+            transform: translateX(100%);
+            transition: transform .5s ease-out;
 
             width: 67.73%;
             height: 100vh;
@@ -180,9 +230,15 @@ body.page-technology::before {
 
                 position: unset;
 
+                transform: unset;
+
                 width: 100%;
                 height: 100%;
                 padding: 0;
+            }
+
+            &.open {
+                transform: translateX(0);
             }
 
             .menu-close-button {
@@ -218,8 +274,44 @@ body.page-technology::before {
                 }
 
                 .main-nav-item {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
                     @media screen and (min-width: 768px) {
                         height: 100%;
+                    }
+
+                    &::after {
+                        content: "";
+
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+
+                        width: 4px;
+                        height: 100%;
+
+                        background-color: transparent;
+                        transition: background-color .3s ease-in-out;
+
+                        @media screen and (min-width: 768px) {
+                            top: unset;
+                            bottom: 0;
+                            left: 0;
+                            right: unset;
+
+                            width: 100%;
+                            height: 4px;
+                        }
+                    }
+
+                    &:hover::after {
+                        background-color: var(--white-50);
+                    }
+
+                    &.current::after {
+                        background-color: var(--white);
                     }
 
                     .nav-link {
