@@ -72,72 +72,6 @@ body {
     background-color: var(--blue-900);
 }
 
-body.page-home {
-    background-image: url(/assets/images/home/background-home-mobile.jpg);
-    background-size: cover;
-
-    @media screen and (min-width: 768px) {
-        background-image: url(/assets/images/home/background-home-tablet.jpg);
-
-        @media screen and (min-width: 1200px) {
-            background-image: url(/assets/images/home/background-home-desktop.jpg);
-        }
-    }
-}
-
-body.page-destination {
-    background-image: url(/assets/images/destination/background-destination-mobile.jpg);
-    background-size: cover;
-
-    @media screen and (min-width: 768px) {
-        background-image: url(/assets/images/destination/background-destination-tablet.jpg);
-
-        @media screen and (min-width: 1200px) {
-            background-image: url(/assets/images/destination/background-destination-desktop.jpg);
-        }
-    }
-}
-
-body.page-crew {
-    background-image: url(/assets/images/crew/background-crew-mobile.jpg);
-    background-size: cover;
-
-    @media screen and (min-width: 768px) {
-        background-image: url(/assets/images/crew/background-crew-tablet.jpg);
-
-        @media screen and (min-width: 1200px) {
-            background-image: url(/assets/images/crew/background-crew-desktop.jpg);
-        }
-    }
-}
-
-body.page-technology {
-    position: relative;
-    overflow: hidden;
-}
-
-body.page-technology::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-
-    background-image: url("/assets/images/technology/background-technology-mobile.jpg");
-    background-size: cover;
-    background-position: center;
-
-    transform: scaleX(-1);
-
-    @media screen and (min-width: 768px) {
-        background-image: url("/assets/images/technology/background-technology-tablet.jpg");
-
-        @media screen and (min-width: 1200px) {
-            background-image: url("/assets/images/technology/background-technology-desktop.jpg");
-            transform: unset;
-        }
-    }
-}
-
 /* Header styles */
 
 .site-header {
@@ -343,6 +277,80 @@ body.page-technology::before {
             @media screen and (min-width: 768px) {
                 display: none;
             }
+        }
+    }
+}
+
+/* Page Home styles */
+
+.page-home {
+    background-image: url(../images/home/background-home-mobile.jpg);
+    background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/home/background-home-tablet.jpg);
+
+        @media screen and (min-width: 1200px) {
+            background-image: url(../images/home/background-home-desktop.jpg);
+        }
+    }
+}
+
+/* Page Destination styles */
+
+.page-destination {
+    background-image: url(../images/destination/background-destination-mobile.jpg);
+    background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/destination/background-destination-tablet.jpg);
+
+        @media screen and (min-width: 1200px) {
+            background-image: url(../images/destination/background-destination-desktop.jpg);
+        }
+    }
+}
+
+/* Page Crew styles */
+
+.page-crew {
+    background-image: url(../images/crew/background-crew-mobile.jpg);
+    background-size: cover;
+
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/crew/background-crew-tablet.jpg);
+
+        @media screen and (min-width: 1200px) {
+            background-image: url(../images/crew/background-crew-desktop.jpg);
+        }
+    }
+}
+
+/* Page Technology styles */
+
+.page-technology {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-technology::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    background-image: url("../images/technology/background-technology-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+
+    transform: scaleX(-1);
+
+    @media screen and (min-width: 768px) {
+        background-image: url("../images/technology/background-technology-tablet.jpg");
+
+        @media screen and (min-width: 1200px) {
+            background-image: url("../images/technology/background-technology-desktop.jpg");
+            transform: unset;
         }
     }
 }
