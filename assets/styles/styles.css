@@ -523,6 +523,10 @@ section {
     }
 }
 
+.destination {
+    color: white; /* TEMP */
+}
+
 /* Page Crew styles */
 
 .page-crew {

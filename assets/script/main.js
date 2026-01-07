@@ -1,3 +1,5 @@
+// Main nav
+
 const mainNavMenuButtons = document.querySelectorAll(".main-nav-menu-button");
 const mainNavMenu = document.getElementById("main-nav");
 
@@ -15,5 +17,33 @@ navLinks.forEach(link => {
 
     if (linkPage === currentPage) {
         link.closest("li").classList.add("current");
-    }
+    };
 });
+
+// Tabs
+
+function openTab(tabNumber) {
+    !tabNumber ? tabNumber = 1 : tabNumber;
+
+    const tabImages = document.querySelectorAll(".tab-image");
+    const tabTexts = document.querySelectorAll(".tab-text");
+    const tabButtons = document.querySelectorAll(".tab-button");
+    
+    tabImages.forEach(tabImage => {
+      tabImage.style.display = "none";
+    });
+
+    tabTexts.forEach(tabText => {
+      tabText.style.display = "none";
+    });
+
+    tabButtons.forEach(tabButton => {
+      tabButton.classList.remove("active");
+    });
+
+    document.getElementById(`tab-image-${tabNumber}`).style.display = "block";
+    document.getElementById(`tab-text-${tabNumber}`).style.display = "block";
+    document.getElementById(`tab-button-${tabNumber}`).classList.add("active");
+}
+
+openTab();

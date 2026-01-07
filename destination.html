@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,19 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+        rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
+
 <body class="page-destination">
     <header class="site-header">
         <div class="site-header-left">
@@ -60,8 +66,112 @@
         </div>
     </header>
     <main>
-        MAIN
+        <section class="destination">
+            <div class="content-wrapper">
+                <header class="destination-header">
+                    <p class="destination-kicker">
+                        <span class="destination-kicker-number">01</span>
+                        <span class="destination-kicker-text">Pick your destination</span>
+                    </p>
+                </header>
+                <div class="tabs">
+                    <div id="tab-image-1" class="tab-image">
+                        <img src="./assets/images/destination/image-moon.webp" alt="Moon">
+                    </div>
+                    <div id="tab-image-2" class="tab-image">
+                        <img src="./assets/images/destination/image-mars.webp" alt="Mars">
+                    </div>
+                    <div id="tab-image-3" class="tab-image">
+                        <img src="./assets/images/destination/image-europa.webp" alt="Mars">
+                    </div>
+                    <div id="tab-image-4" class="tab-image">
+                        <img src="./assets/images/destination/image-titan.webp" alt="Mars">
+                    </div>
+                    <div class="wrapper">
+                        <div class="tab-button-wrapper">
+                            <button id="tab-button-1" class="tab-button" onclick="openTab(1)">Moon</button>
+                            <button id="tab-button-2" class="tab-button" onclick="openTab(2)">Mars</button>
+                            <button id="tab-button-3" class="tab-button" onclick="openTab(3)">Europa</button>
+                            <button id="tab-button-4" class="tab-button" onclick="openTab(4)">Titan</button>
+                        </div>
+                        <div id="tab-text-1" class="tab-text">
+                            <h1 class="destinations-tab-title">Moon</h1>
+                            <p class="destinations-tab-description">See our planet as you’ve never seen it before. A
+                                perfect relaxing trip away to help regain perspective and come back refreshed. While
+                                you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+                            </p>
+                            <hr class="destinations-tab-divider">
+                            <div class="stats-wrapper">
+                                <div class="distance-wrapper">
+                                    <p class="stat-title">Avg. distance</p>
+                                    <p class="stat-value">384,400 km</p>
+                                </div>
+                                <div class="travel-time-wrapper">
+                                    <p class="stat-title">Est. travel time</p>
+                                    <p class="stat-title">3 days</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-text-2" class="tab-text">
+                            <h1 class="destinations-tab-title">Mars</h1>
+                            <p class="destinations-tab-description">Don’t forget to pack your hiking boots. You’ll need
+                                them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s
+                                two and a half times the size of Everest!
+                            </p>
+                            <hr class="destinations-tab-divider">
+                            <div class="stats-wrapper">
+                                <div class="distance-wrapper">
+                                    <p class="stat-title">Avg. distance</p>
+                                    <p class="stat-value">225 MIL. km</p>
+                                </div>
+                                <div class="travel-time-wrapper">
+                                    <p class="stat-title">Est. travel time</p>
+                                    <p class="stat-title">9 months</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-text-3" class="tab-text">
+                            <h1 class="destinations-tab-title">Europa</h1>
+                            <p class="destinations-tab-description">The smallest of the four Galilean moons orbiting
+                                Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit
+                                of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
+                            </p>
+                            <hr class="destinations-tab-divider">
+                            <div class="stats-wrapper">
+                                <div class="distance-wrapper">
+                                    <p class="stat-title">Avg. distance</p>
+                                    <p class="stat-value">628 MIL. km</p>
+                                </div>
+                                <div class="travel-time-wrapper">
+                                    <p class="stat-title">Est. travel time</p>
+                                    <p class="stat-title">3 years</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-text-4" class="tab-text">
+                            <h1 class="destinations-tab-title">Titan</h1>
+                            <p class="destinations-tab-description">The only moon known to have a dense atmosphere other
+                                than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a
+                                bonus, you get striking views of the Rings of Saturn.
+                            </p>
+                            <hr class="destinations-tab-divider">
+                            <div class="stats-wrapper">
+                                <div class="distance-wrapper">
+                                    <p class="stat-title">Avg. distance</p>
+                                    <p class="stat-value">1.6 BIL. km</p>
+                                </div>
+                                <div class="travel-time-wrapper">
+                                    <p class="stat-title">Est. travel time</p>
+                                    <p class="stat-title">7 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script defer src="assets/script/main.js"></script>
 </body>
+
 </html>
