@@ -1,7 +1,9 @@
 /* 
     To do
     - Change all hsl(from var(--white) h s l / 0.25) to rgb
-    - Fix destination background height changing when tabs change
+    - Fix destinations background height changing when tabs change
+    - Make header sticky
+    Fix mobile menu appearing behind image on destination page
 */
 
 /* CSS reset */
@@ -298,6 +300,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 
     height: 88px;
     padding: 0 6.4%;
