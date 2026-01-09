@@ -1,6 +1,7 @@
 /* 
     To do
-    Change all hsl(from var(--white) h s l / 0.25) to rgb
+    - Change all hsl(from var(--white) h s l / 0.25) to rgb
+    - Fix destination background height changing when tabs change
 */
 
 /* CSS reset */
@@ -697,28 +698,47 @@ section {
                 }
             }
 
-            .tab-image {
+            .tab-images {
                 height: 203px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+
+                position: relative;
 
                 @media screen and (min-width: 768px) {
                     height: 384px;
 
                     @media screen and (min-width: 1200px) {
-                        height: unset;
+                        height: 100%;
                     }
                 }
 
-                img {
-                    width: 45.87%;
+                .tab-image {
+                    width: 100%;
+                    height: 100%;
 
-                    @media screen and (min-width: 768px) {
-                        width: 43.6%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                        @media screen and (min-width: 1200px) {
-                            width: 89.05%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    opacity: 0;
+                    transition: opacity 500ms ease-in-out;
+
+                    &.active {
+                        opacity: 1;
+                    }
+
+                    img {
+                        width: 45.87%;
+
+                        @media screen and (min-width: 768px) {
+                            width: 43.6%;
+
+                            @media screen and (min-width: 1200px) {
+                                width: 89.05%;
+                            }
                         }
                     }
                 }
@@ -795,42 +815,58 @@ section {
                     }
                 }
 
-                .tab-text {
-                    .destinations-tab-description {
-                        margin-top: 16px;
-                    }
+                .tab-texts {
+                    position: relative;
 
-                    .destinations-tab-divider {
-                        margin: 24px 0;
-                        border-top: 1px solid rgb(from var(--white) r g b / 0.25);
-                        border-bottom: 0;
+                    .tab-text {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
 
-                        @media screen and (min-width: 1200px) {
-                            margin: 40px 0;
+                        opacity: 0;
+                        transition: opacity 500ms ease-in-out;
+
+                        &.active {
+                            position: relative;
+                            opacity: 1;
                         }
-                    }
 
-                    .stats-wrapper {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 24px;
+                        .destinations-tab-description {
+                            margin-top: 16px;
+                        }
 
-                        @media screen and (min-width: 768px) {
-                            flex-direction: row;
-                            justify-content: center;
+                        .destinations-tab-divider {
+                            margin: 24px 0;
+                            border-top: 1px solid rgb(from var(--white) r g b / 0.25);
+                            border-bottom: 0;
 
                             @media screen and (min-width: 1200px) {
-                                justify-content: flex-start;
+                                margin: 40px 0;
                             }
                         }
 
-                        >* {
+                        .stats-wrapper {
                             display: flex;
                             flex-direction: column;
-                            gap: 12px;
+                            gap: 24px;
 
                             @media screen and (min-width: 768px) {
-                                flex: 1 1 0;
+                                flex-direction: row;
+                                justify-content: center;
+
+                                @media screen and (min-width: 1200px) {
+                                    justify-content: flex-start;
+                                }
+                            }
+
+                            >* {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 12px;
+
+                                @media screen and (min-width: 768px) {
+                                    flex: 1 1 0;
+                                }
                             }
                         }
                     }

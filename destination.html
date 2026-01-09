@@ -75,17 +75,19 @@
                     </p>
                 </header>
                 <div class="tabs">
-                    <div id="tab-image-1" class="tab-image">
-                        <img src="./assets/images/destination/image-moon.webp" alt="Moon">
-                    </div>
-                    <div id="tab-image-2" class="tab-image">
-                        <img src="./assets/images/destination/image-mars.webp" alt="Mars">
-                    </div>
-                    <div id="tab-image-3" class="tab-image">
-                        <img src="./assets/images/destination/image-europa.webp" alt="Mars">
-                    </div>
-                    <div id="tab-image-4" class="tab-image">
-                        <img src="./assets/images/destination/image-titan.webp" alt="Mars">
+                    <div class="tab-images">
+                        <div id="tab-image-1" class="tab-image">
+                            <img src="./assets/images/destination/image-moon.webp" alt="Moon">
+                        </div>
+                        <div id="tab-image-2" class="tab-image">
+                            <img src="./assets/images/destination/image-mars.webp" alt="Mars">
+                        </div>
+                        <div id="tab-image-3" class="tab-image">
+                            <img src="./assets/images/destination/image-europa.webp" alt="Mars">
+                        </div>
+                        <div id="tab-image-4" class="tab-image">
+                            <img src="./assets/images/destination/image-titan.webp" alt="Mars">
+                        </div>
                     </div>
                     <div class="wrapper">
                         <div class="tab-button-wrapper">
@@ -94,75 +96,87 @@
                             <button id="tab-button-3" class="tab-button" onclick="openTab(3)">Europa</button>
                             <button id="tab-button-4" class="tab-button" onclick="openTab(4)">Titan</button>
                         </div>
-                        <div id="tab-text-1" class="tab-text">
-                            <h1 class="destinations-tab-title heading-2">Moon</h1>
-                            <p class="destinations-tab-description regular-paragraph">See our planet as you’ve never seen it before. A
-                                perfect relaxing trip away to help regain perspective and come back refreshed. While
-                                you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
-                            </p>
-                            <hr class="destinations-tab-divider">
-                            <div class="stats-wrapper">
-                                <div class="distance-wrapper">
-                                    <p class="stat-title">Avg. distance</p>
-                                    <p class="stat-value">384,400 km</p>
-                                </div>
-                                <div class="travel-time-wrapper">
-                                    <p class="stat-title">Est. travel time</p>
-                                    <p class="stat-value">3 days</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-text-2" class="tab-text">
-                            <h1 class="destinations-tab-title heading-2">Mars</h1>
-                            <p class="destinations-tab-description regular-paragraph">Don’t forget to pack your hiking boots. You’ll need
-                                them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s
-                                two and a half times the size of Everest!
-                            </p>
-                            <hr class="destinations-tab-divider">
-                            <div class="stats-wrapper">
-                                <div class="distance-wrapper">
-                                    <p class="stat-title">Avg. distance</p>
-                                    <p class="stat-value">225 MIL. km</p>
-                                </div>
-                                <div class="travel-time-wrapper">
-                                    <p class="stat-title">Est. travel time</p>
-                                    <p class="stat-value">9 months</p>
+                        <div class="tab-texts">
+                            <div id="tab-text-1" class="tab-text">
+                                <h1 class="destinations-tab-title heading-2">Moon</h1>
+                                <p class="destinations-tab-description regular-paragraph">See our planet as you’ve never
+                                    seen it before. A
+                                    perfect relaxing trip away to help regain perspective and come back refreshed. While
+                                    you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing
+                                    sites.
+                                </p>
+                                <hr class="destinations-tab-divider">
+                                <div class="stats-wrapper">
+                                    <div class="distance-wrapper">
+                                        <p class="stat-title">Avg. distance</p>
+                                        <p class="stat-value">384,400 km</p>
+                                    </div>
+                                    <div class="travel-time-wrapper">
+                                        <p class="stat-title">Est. travel time</p>
+                                        <p class="stat-value">3 days</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="tab-text-3" class="tab-text">
-                            <h1 class="destinations-tab-title heading-2">Europa</h1>
-                            <p class="destinations-tab-description regular-paragraph">The smallest of the four Galilean moons orbiting
-                                Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit
-                                of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
-                            </p>
-                            <hr class="destinations-tab-divider">
-                            <div class="stats-wrapper">
-                                <div class="distance-wrapper">
-                                    <p class="stat-title">Avg. distance</p>
-                                    <p class="stat-value">628 MIL. km</p>
-                                </div>
-                                <div class="travel-time-wrapper">
-                                    <p class="stat-title">Est. travel time</p>
-                                    <p class="stat-value">3 years</p>
+                            <div id="tab-text-2" class="tab-text">
+                                <h1 class="destinations-tab-title heading-2">Mars</h1>
+                                <p class="destinations-tab-description regular-paragraph">Don’t forget to pack your
+                                    hiking
+                                    boots. You’ll need
+                                    them to tackle Olympus Mons, the tallest planetary mountain in our solar system.
+                                    It’s
+                                    two and a half times the size of Everest!
+                                </p>
+                                <hr class="destinations-tab-divider">
+                                <div class="stats-wrapper">
+                                    <div class="distance-wrapper">
+                                        <p class="stat-title">Avg. distance</p>
+                                        <p class="stat-value">225 MIL. km</p>
+                                    </div>
+                                    <div class="travel-time-wrapper">
+                                        <p class="stat-title">Est. travel time</p>
+                                        <p class="stat-value">9 months</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="tab-text-4" class="tab-text">
-                            <h1 class="destinations-tab-title heading-2">Titan</h1>
-                            <p class="destinations-tab-description regular-paragraph">The only moon known to have a dense atmosphere other
-                                than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a
-                                bonus, you get striking views of the Rings of Saturn.
-                            </p>
-                            <hr class="destinations-tab-divider">
-                            <div class="stats-wrapper">
-                                <div class="distance-wrapper">
-                                    <p class="stat-title">Avg. distance</p>
-                                    <p class="stat-value">1.6 BIL. km</p>
+                            <div id="tab-text-3" class="tab-text">
+                                <h1 class="destinations-tab-title heading-2">Europa</h1>
+                                <p class="destinations-tab-description regular-paragraph">The smallest of the four
+                                    Galilean
+                                    moons orbiting
+                                    Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a
+                                    bit
+                                    of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
+                                </p>
+                                <hr class="destinations-tab-divider">
+                                <div class="stats-wrapper">
+                                    <div class="distance-wrapper">
+                                        <p class="stat-title">Avg. distance</p>
+                                        <p class="stat-value">628 MIL. km</p>
+                                    </div>
+                                    <div class="travel-time-wrapper">
+                                        <p class="stat-title">Est. travel time</p>
+                                        <p class="stat-value">3 years</p>
+                                    </div>
                                 </div>
-                                <div class="travel-time-wrapper">
-                                    <p class="stat-title">Est. travel time</p>
-                                    <p class="stat-value">7 years</p>
+                            </div>
+                            <div id="tab-text-4" class="tab-text">
+                                <h1 class="destinations-tab-title heading-2">Titan</h1>
+                                <p class="destinations-tab-description regular-paragraph">The only moon known to have a
+                                    dense atmosphere other
+                                    than Earth, Titan is a home away from home (just a few hundred degrees colder!). As
+                                    a
+                                    bonus, you get striking views of the Rings of Saturn.
+                                </p>
+                                <hr class="destinations-tab-divider">
+                                <div class="stats-wrapper">
+                                    <div class="distance-wrapper">
+                                        <p class="stat-title">Avg. distance</p>
+                                        <p class="stat-value">1.6 BIL. km</p>
+                                    </div>
+                                    <div class="travel-time-wrapper">
+                                        <p class="stat-title">Est. travel time</p>
+                                        <p class="stat-value">7 years</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
