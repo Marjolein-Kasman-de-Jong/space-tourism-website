@@ -41,7 +41,7 @@ function openTab(tabNumber) {
       tabButton.classList.remove("active");
     });
 
-    document.getElementById(`tab-image-${tabNumber}`).style.display = "block";
+    document.getElementById(`tab-image-${tabNumber}`).style.display = "flex";
     document.getElementById(`tab-text-${tabNumber}`).style.display = "block";
     document.getElementById(`tab-button-${tabNumber}`).classList.add("active");
 }
