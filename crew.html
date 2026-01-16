@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,19 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+        rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
+
 <body class="page-crew">
     <header class="site-header">
         <div class="site-header-left">
@@ -60,8 +66,87 @@
         </div>
     </header>
     <main>
-        MAIN
+        <section class="crew">
+            <div class="content-wrapper">
+                <header class="crew-header">
+                    <p class="crew-kicker">
+                        <span class="crew-kicker-number">02</span>
+                        <span class="crew-kicker-text">Meet your crew</span>
+                    </p>
+                </header>
+                <div class="tabs">
+                    <div class="wrapper">
+                        <div class="tab-texts">
+                            <div id="tab-text-1" class="tab-text">
+                                <h1 class="crew-tab-title heading-3">
+                                    <span class="crew-role">Commander</span>
+                                    <span class="crew-name">Douglas Hurley</span>
+                                </h1>
+                                <p class="crew-tab-description regular-paragraph">Douglas Gerald Hurley is an
+                                    American engineer, former Marine Corps pilot and former NASA astronaut. He launched
+                                    into space for the third time as commander of Crew Dragon Demo-2.
+                                </p>
+                            </div>
+                            <div id="tab-text-2" class="tab-text">
+                                <h1 class="crew-tab-title heading-3">
+                                    <span class="crew-role">Mission Specialist</span>
+                                    <span class="crew-name">Mark Shuttleworth</span>
+                                </h1>
+                                <p class="crew-tab-description regular-paragraph">Mark Richard Shuttleworth is
+                                    the founder and CEO of Canonical, the company behind the Linux-based Ubuntu
+                                    operating system. Shuttleworth became the first South African to travel to space as
+                                    a space tourist.
+                                </p>
+                            </div>
+                            <div id="tab-text-3" class="tab-text">
+                                <h1 class="crew-tab-title heading-3">
+                                    <span class="crew-role">Pilot</span>
+                                    <span class="crew-name">Victor Glover</span>
+                                </h1>
+                                <p class="crew-tab-description regular-paragraph">Pilot on the first operational
+                                    flight of the SpaceX Crew Dragon to the International Space Station. Glover is a
+                                    commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of
+                                    Expedition 64, and served as a station systems flight engineer.
+                                </p>
+                            </div>
+                            <div id="tab-text-4" class="tab-text">
+                                <h1 class="crew-tab-title heading-3">
+                                    <span class="crew-role">Flight Engineer</span>
+                                    <span class="crew-name">Anousheh Ansari</span>
+                                </h1>
+                                <p class="crew-tab-description regular-paragraph">Anousheh Ansari is an Iranian
+                                    American engineer and co-founder of Prodea Systems. Ansari was the fourth
+                                    self-funded space tourist, the first self-funded woman to fly to the ISS, and the
+                                    first Iranian in space.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-button-wrapper">
+                            <button id="tab-button-1" class="tab-button" onclick="openTab(1)"></button>
+                            <button id="tab-button-2" class="tab-button" onclick="openTab(2)"></button>
+                            <button id="tab-button-3" class="tab-button" onclick="openTab(3)"></button>
+                            <button id="tab-button-4" class="tab-button" onclick="openTab(4)"></button>
+                        </div>
+                    </div>
+                    <div class="tab-images">
+                        <div id="tab-image-1" class="tab-image">
+                            <img src="./assets/images/crew/image-douglas-hurley.webp" alt="Douglas Hurley">
+                        </div>
+                        <div id="tab-image-2" class="tab-image">
+                            <img src="./assets/images/crew/image-mark-shuttleworth.webp" alt="Mark Shuttleworth">
+                        </div>
+                        <div id="tab-image-3" class="tab-image">
+                            <img src="./assets/images/crew/image-victor-glover.webp" alt="Victor Glover">
+                        </div>
+                        <div id="tab-image-4" class="tab-image">
+                            <img src="./assets/images/crew/image-anousheh-ansari.webp" alt="Anousheh Ansari">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script defer src="assets/script/main.js"></script>
 </body>
+
 </html>
