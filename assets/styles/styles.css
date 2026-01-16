@@ -93,6 +93,29 @@ video {
     }
 }
 
+/* \/ Nog aanpassen */
+.technology .tab-button {
+    color: var(--blue-300);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.13125rem;
+    text-transform: uppercase;
+    transition: color .3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        font-size: 1rem;
+        letter-spacing: 0.125rem;
+    }
+
+    &.active {
+        color: var(--white);
+    }
+}
+
 .heading-1 {
     .headline {
         color: var(--white);
@@ -218,7 +241,8 @@ video {
 }
 
 .destination-kicker,
-.crew-kicker {
+.crew-kicker,
+.technology-kicker {
     color: var(--white);
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Barlow Condensed", sans-serif;
@@ -226,7 +250,8 @@ video {
     line-height: normal;
 
     .destination-kicker-number,
-    .crew-kicker-number {
+    .crew-kicker-number,
+    .technology-kicker-number {
         font-size: 1rem;
         font-weight: 700;
         letter-spacing: 0.15rem;
@@ -243,7 +268,8 @@ video {
     }
 
     .destination-kicker-text,
-    .crew-kicker-text {
+    .crew-kicker-text,
+    .technology-kicker-text {
         font-size: 1rem;
         font-weight: 400;
         letter-spacing: 0.15rem;
@@ -1200,6 +1226,201 @@ section {
         @media screen and (min-width: 1200px) {
             background-image: url("../images/technology/background-technology-desktop.jpg");
             transform: unset;
+        }
+    }
+}
+
+.technology {
+    .content-wrapper {
+        width: 87.2%;
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media screen and (min-width: 768px) {
+            width: 89.58%;
+            padding: 40px 0;
+
+            @media screen and (min-width: 1200px) {
+                width: 78%;
+                margin-top: 136px;
+                padding: 48px 0;
+                max-width: 1110px;
+            }
+        }
+
+        .technology-header {
+            .technology-kicker {
+                display: flex;
+                justify-content: center;
+                gap: 24px;
+
+                @media screen and (min-width: 768px) {
+                    justify-content: flex-start;
+                }
+
+                .technology-kicker-number {
+                    opacity: .25;
+                }
+            }
+        }
+
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            @media screen and (min-width: 1200px) {
+                height: 734px;
+                flex-direction: row;
+            }
+
+            >* {
+                @media screen and (min-width: 1200px) {
+                    flex: 1;
+                }
+            }
+
+            .tab-images {
+                height: 203px;
+
+                position: relative;
+
+                @media screen and (min-width: 768px) {
+                    height: 384px;
+
+                    @media screen and (min-width: 1200px) {
+                        height: 100%;
+                    }
+                }
+
+                .tab-image {
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    opacity: 0;
+                    transition: opacity 500ms ease-in-out;
+
+                    &.active {
+                        opacity: 1;
+                    }
+
+                    img {
+                        width: 45.87%;
+
+                        @media screen and (min-width: 768px) {
+                            width: 43.6%;
+
+                            @media screen and (min-width: 1200px) {
+                                width: 89.05%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                @media screen and (min-width: 768px) {
+                    width: 74.71%;
+                    margin: 0 auto;
+
+                    @media screen and (min-width: 1200px) {
+                        width: unset;
+                        justify-content: center;
+                        gap: 40px;
+                    }
+                }
+
+                >* {
+                    @media screen and (min-width: 1200px) {
+                        max-width: 445px;
+                        margin-left: 47px;
+                    }
+                }
+
+                .tab-button-wrapper {
+                    height: 32px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 32px;
+
+                    @media screen and (min-width: 1200px) {
+                        justify-content: flex-start;
+                    }
+
+                    .tab-button {
+                        background-color: transparent;
+                        border: none;
+                        display: flex;
+                        align-items: flex-start;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 4px;
+                            background-color: var(--white);
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            opacity: 0;
+                            transition: opacity .3s ease-in-out;
+                        }
+
+                        &:hover {
+                            @media (hover: hover) and (pointer: fine) {
+                                cursor: pointer;
+
+                                &::after {
+                                    background-color: hsl(from var(--white) h s l / 0.5);
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        &.active {
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                .tab-texts {
+                    position: relative;
+
+                    .tab-text {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        opacity: 0;
+                        transition: opacity 500ms ease-in-out;
+
+                        &.active {
+                            position: relative;
+                            opacity: 1;
+                        }
+
+                        .technology-tab-description {
+                            margin-top: 16px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
