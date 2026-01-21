@@ -77,14 +77,33 @@
                 <div class="tabs">
                     <div class="tab-images">
                         <div id="tab-image-1" class="tab-image">
-                            <img src="./assets/images/technology/image-launch-vehicle-portrait.jpg"
-                                alt="Launch vehicle">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                    srcset="./assets/images/technology/image-launch-vehicle-portrait.jpg">
+                                <source media="(min-width: 768px)"
+                                    srcset="./assets/images/technology/image-launch-vehicle-landscape.jpg">
+                                <img src="./assets/images/technology/image-launch-vehicle-portrait.jpg"
+                                    alt="Launch vehicle">
+                            </picture>
                         </div>
                         <div id="tab-image-2" class="tab-image">
-                            <img src="./assets/images/technology/image-spaceport-portrait.jpg" alt="Spaceport">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                    srcset="./assets/images/technology/image-spaceport-portrait.jpg">
+                                <source media="(min-width: 768px)"
+                                    srcset="./assets/images/technology/image-spaceport-landscape.jpg">
+                                <img src="./assets/images/technology/image-spaceport-portrait.jpg" alt="Spaceport">
+                            </picture>
                         </div>
                         <div id="tab-image-3" class="tab-image">
-                            <img src="./assets/images/technology/image-space-capsule-portrait.jpg" alt="Space capsule">
+                            <picture>
+                                <source media="(min-width: 1200px)"
+                                    srcset="./assets/images/technology/image-space-capsule-portrait.jpg">
+                                <source media="(min-width: 768px)"
+                                    srcset="./assets/images/technology/image-space-capsule-landscape.jpg">
+                                <img src="./assets/images/technology/image-space-capsule-portrait.jpg"
+                                    alt="Space capsule">
+                            </picture>
                         </div>
                     </div>
                     <div class="wrapper">
@@ -95,11 +114,11 @@
                         </div>
                         <div class="tab-texts">
                             <div id="tab-text-1" class="tab-text">
-                                <header>
+                                <header class="heading-4">
                                     <p class="eyebrow">
                                         The terminology...
                                     </p>
-                                    <h1 class="technology-tab-title heading-2">
+                                    <h1 class="technology-tab-title">
                                         Launch vehicle
                                     </h1>
                                 </header>
@@ -111,11 +130,11 @@
                                 </p>
                             </div>
                             <div id="tab-text-2" class="tab-text">
-                                <header>
+                                <header class="heading-4">
                                     <p class="eyebrow">
                                         The terminology...
                                     </p>
-                                    <h1 class="technology-tab-title heading-2">
+                                    <h1 class="technology-tab-title">
                                         Spaceport
                                     </h1>
                                 </header>
@@ -127,11 +146,11 @@
                                 </p>
                             </div>
                             <div id="tab-text-3" class="tab-text">
-                                <header>
+                                <header class="heading-4">
                                     <p class="eyebrow">
                                         The terminology...
                                     </p>
-                                    <h1 class="technology-tab-title heading-2">
+                                    <h1 class="technology-tab-title">
                                         Space capsule
                                     </h1>
                                 </header>
