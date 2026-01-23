@@ -415,7 +415,6 @@ main {
             padding-top: 136px;
         }
     }
-
 }
 
 section {
@@ -427,17 +426,16 @@ section {
 /* Header styles */
 
 .site-header {
-    /* position: relative; */
     width: 100%;
 
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
 
     height: 88px;
     padding: 0 6.4%;
@@ -447,11 +445,11 @@ section {
         padding: 0;
 
         @media screen and (min-width: 1200px) {
-            position: fixed;
+            width: 100%;
 
+            position: fixed;
             top: 40px;
             z-index: 10;
-            width: 100%;
         }
     }
 
@@ -659,7 +657,6 @@ section {
 
 .hero {
     @media screen and (min-width: 1200px) {
-        /* min-height: 100vh; */
         min-height: calc(100vh - 136px);
 
         display: flex;
@@ -791,7 +788,6 @@ section {
 .destination {
     .content-wrapper {
         width: 87.2%;
-        /* max-width: 375px; */
         padding: 24px 0;
         display: flex;
         flex-direction: column;
@@ -1042,6 +1038,7 @@ section {
     .content-wrapper {
         width: 87.2%;
         padding: 24px 0;
+
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -1049,13 +1046,14 @@ section {
         @media screen and (min-width: 768px) {
             width: 89.58%;
             max-width: 688px;
+
             padding: 40px 0;
 
             @media screen and (min-width: 1200px) {
                 width: 78%;
+                max-width: 1110px;
                 margin-top: 136px;
                 padding: 48px 0;
-                max-width: 1110px;
             }
         }
 
@@ -1305,8 +1303,7 @@ section {
 .technology {
     @media screen and (min-width: 1200px) {
         justify-content: center;
-        /* overflow: crop; */
-        overflo: hidden;
+        overflow: hidden;
     }
 
     .content-wrapper {
